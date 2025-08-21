@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet The Stars</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(135deg, #000, #444);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { max-width: 600px; margin: auto; font-size: 1.1rem; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #111;
+      padding: 0.7rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: #ffcc00; }
+
+    .section {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .card h3 { margin: 0.5rem 0; }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      margin: 1rem 0;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .btn:hover { background: #ffcc00; color: #111; }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Booking Form */
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.6rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      background: #111;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    form button:hover { background: #ffcc00; color: #111; }
+  </style>
+</head>
+<body>
+
+<header>
+     <img src="logo.jpeg" alt="MeetTheStars Logo" style="max-height:80px; margin-bottom:10px;">
+  <h1>Meet The Stars</h1>
+  <p>Book Exclusive Meet & Greets with Your Favorite Stars.</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrities Menu</title>
+  <style>
+    /* Menu styles */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      position: relative;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      background: #333;
+      color: #fff;
+    }
+    a:hover {
+      background: #444;
+    }
+    /* Dropdown */
+    ul ul {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background: #222;
+      max-height: 300px; /* scroll for many names */
+      overflow-y: auto;
+      width: 220px;
+    }
+    li:hover > ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="#">Celebrities ▾</a>
+      <ul>
+        <!-- Male -->
+        <li><a href="#JasonMomoa">Jason Momoa</a></li>
+        <li><a href="#CharlieHunnam">Charlie Hunnam</a></li>
+        <li><a href="#TomHolland">Tom Holland</a></li>
+        <li><a href="#KeanuReeves">Keanu Reeves</a></li>
+        <li><a href="#MarkSmith">Mark Smith</a></li>
+        <li><a href="#ClintEastwood">Clint Eastwood</a></li>
+        <li><a href="#JayHarrington">Jay Harrington</a></li>
+        <li><a href="#BlakeShelton">Blake Shelton</a></li>
+        <li><a href="#PedroPascal">Pedro Pascal</a></li>
+        <li><a href="#LukeGrimes">Luke Grimes</a></li>
+        <li><a href="#JohnnyDepp">Johnny Depp</a></li>
+        <li><a href="#TravisFimmel">Travis Fimmel</a></li>
+        <li><a href="#TaylorKinney">Taylor Kinney</a></li>
+        <li><a href="#BruceSpringsteen">Bruce Springsteen</a></li>
+        <li><a href="#GeorgeStrait">George Strait</a></li>
+        <li><a href="#HauserCello">Hauser Cello</a></li>
+        <li><a href="#KevinCostner">Kevin Costner</a></li>
+        <li><a href="#DonnieWahlberg">Donnie Wahlberg</a></li>
+        <li><a href="#JasonStatham">Jason Statham</a></li>
+        <li><a href="#JasonCrabb">Jason Crabb</a></li>
+        <li><a href="#WillSmith">Will Smith</a></li>
+        <li><a href="#ClintWright">Clint Wright</a></li>
+        <li><a href="#PatrickMahomes">Patrick Mahomes</a></li>
+        <li><a href="#TomSelleck">Tom Selleck</a></li>
+        <li><a href="#ColeHauser">Cole Hauser</a></li>
+        <li><a href="#KidRock">Kid Rock</a></li>
+        <li><a href="#AnthonyHopkins">Anthony Hopkins</a></li>
+        <li><a href="#ChrisHemsworth">Chris Hemsworth</a></li>
+        <li><a href="#GerardButler">Gerard Butler</a></li>
+        <li><a href="#TomHiddleston">Tom Hiddleston</a></li>
+        <li><a href="#JohnnyOrlando">Johnny Orlando</a></li>
+        <li><a href="#SamHueghan">Sam Hueghan</a></li>
+        <li><a href="#AlexWarren">Alex Warren</a></li>
+        <li><a href="#EricClapton">Eric Clapton</a></li>
+        <li><a href="#TraceAdkins">Trace Adkins</a></li>
+        <li><a href="#ChaseRice">Chase Rice</a></li>
+        <li><a href="#ChanningTatum">Channing Tatum</a></li>
+        <li><a href="#RileyGreen">Riley Green</a></li>
+
+        <!-- Female -->
+        <li><a href="#MichelMonroe">Michel Monroe</a></li>
+        <li><a href="#SabrinaCarpenter">Sabrina Carpenter</a></li>
+        <li><a href="#BeatriceEgli">Beatrice Egli</a></li>
+        <li><a href="#LivMorgan">Liv Morgan</a></li>
+        <li><a href="#HannahBarron">Hannah Barron</a></li>
+        <li><a href="#AmberMarshall">Amber Marshall</a></li>
+        <li><a href="#SandraBullock">Sandra Bullock</a></li>
+        <li><a href="#DanicaPatrick">Danica Patrick</a></li>
+        <li><a href="#AlexaBliss">Alexa Bliss</a></li>
+        <li><a href="#ShaniaTwain">Shania Twain</a></li>
+        <li><a href="#OliviaDunne">Olivia Dunne</a></li>
+        <li><a href="#MerylStreep">Meryl Streep</a></li>
+        <li><a href="#OliviaRodrigo">Olivia Rodrigo</a></li>
+        <li><a href="#NaomiScott">Naomi Scott</a></li>
+        <li><a href="#JenniferAniston">Jennifer Aniston</a></li>
+        <li><a href="#DollyParton">Dolly Parton</a></li>
+        <li><a href="#HalleBerry">Halle Berry</a></li>
+        <li><a href="#LaurenElizabeth">Lauren Elizabeth</a></li>
+        <li><a href="#EllenDeGeneres">Ellen DeGeneres</a></li>
+        <li><a href="#CarrieUnderwood">Carrie Underwood</a></li>
+        <li><a href="#JenniferLawrence">Jennifer Lawrence</a></li>
+        <li><a href="#AndreaBerg">Andrea Berg</a></li>
+        <li><a href="#AmandaHolden">Amanda Holden</a></li>
+        <li><a href="#EmiliaClarke">Emilia Clarke</a></li>
+        <li><a href="#JenniferGarner">Jennifer Garner</a></li>
+        <li><a href="#MilaKunis">Mila Kunis</a></li>
+        <li><a href="#JujuWatkins">Juju Watkins</a></li>
+        <li><a href="#LaineyWilson">Lainey Wilson</a></li>
+        <li><a href="#DuniaSantos">Dunia Santos</a></li>
+        <li><a href="#MargotRobbie">Margot Robbie</a></li>
+        <li><a href="#KaleyCuoco">Kaley Cuoco</a></li>
+        <li><a href="#CaitlinClark">Caitlin Clark</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
+
+  <a href="#book">Book Now</a>
+  <a href="#categories">Categories</a>
+</nav>
+
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>MeetTheStars is the premier platform for booking exclusive celebrity meet and greet experiences. With access to over 71 world-renowned stars across music, film, sports, fashion, and entertainment, we connect fans, brands, and organizations with the icons they admire.
+
+Whether you’re planning a private event, a corporate function, a product launch, or an unforgettable personal experience, MeetTheStars makes it possible. We handle everything from celebrity selection and booking to seamless event coordination, ensuring a professional, secure, and memorable experience.
+
+Our mission is simple: to bring fans closer to their favorite celebrities and create once-in-a-lifetime moments. With a commitment to excellence, trust, and VIP service, MeetTheStars is your gateway to the world’s most recognized personalities.</p>
+</section>
+<section id="reviews" class="section" style="background:#f8f8f8; padding:3rem 1rem; text-align:center;">
+  <h2 style="font-size:2rem; margin-bottom:2rem;">What Clients Say</h2>
+  
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; max-width:1100px; margin:auto;">
+    
+    <!-- Review 1 -->
+    <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <p style="font-size:1rem; line-height:1.6;">
+        ⭐⭐⭐⭐⭐  
+        <br>
+        “MeetTheStars made our corporate event unforgettable. Everything was seamless from booking to the actual meet & greet. Highly professional service!”
+      </p>
+      <p style="margin-top:1rem; font-weight:bold;">— Sarah M., Event Planner</p>
+    </div>
+
+    <!-- Review 2 -->
+    <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <p style="font-size:1rem; line-height:1.6;">
+        ⭐⭐⭐⭐⭐  
+        <br>
+        “I booked a meet & greet with my favorite musician and it was a dream come true. The process was smooth and I got exactly what was promised.”
+      </p>
+      <p style="margin-top:1rem; font-weight:bold;">— James L., Music Fan</p>
+    </div>
+
+    <!-- Review 3 -->
+    <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <p style="font-size:1rem; line-height:1.6;">
+        ⭐⭐⭐⭐⭐  
+        <br>
+        “Professional, reliable, and truly VIP. MeetTheStars gave us direct access to a celebrity guest for our brand launch. Couldn’t be happier!”
+      </p>
+      <p style="margin-top:1rem; font-weight:bold;">— Aisha K., Marketing Director</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="celebrities" class="section">
+  <h2>Featured Celebrities</h2>
+  <div class="grid">
+    <!-- Example celebrity card -->
+    <div class="card">
+      <img src="Jason Momoa.jpeg" alt="Celebrity 1">
+      <h3>Jason Momoa</h3>
+      <p>Actor / Musician</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Jennifer Aniston.jpeg" alt="Celebrity 2">
+      <h3>Jennifer Aniston</h3>
+      <p>Actress & Producer</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Tom Cruise.jpeg" alt="Celebrity 2">
+      <h3>Tom Cruise</h3>
+      <p>Actor & Producer</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Margot Robbie.jpeg" alt="Celebrity 2">
+      <h3>Margot Robbie</h3>
+      <p>Actress & Producer</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Chris Hemsworth.jpeg" alt="Celebrity 2">
+      <h3>Chris Hemsworth</h3>
+      <p>Actor</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Sandra Bullock.jpeg" alt="Celebrity 2">
+      <h3>Sandra Bullock</h3>
+      <p>Actress & Producer</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Keanu Reeves.jpeg" alt="Celebrity 2">
+      <h3>Keanu Reeves</h3>
+      <p>Actor</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Emilia Clarke.jpeg" alt="Celebrity 2">
+      <h3>Emilia Clarke</h3>
+      <p>Actress</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Johnny Depp.jpeg" alt="Celebrity 2">
+      <h3>Johnny Depp</h3>
+      <p>Actor & Musician</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Jennifer Lawrence.jpeg" alt="Celebrity 2">
+      <h3>Jennifer Lawrence</h3>
+      <p>Actress</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Will Smith.jpeg" alt="Celebrity 2">
+      <h3>Will Smith</h3>
+      <p>Actor, Rapper & Producer</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="card">
+      <img src="Shania Twain.jpeg" alt="Celebrity 2">
+      <h3>Shania Twain</h3>
+      <p>Singer & Songwriter</p>
+      <a href="#book" class="btn">Book Now</a>
+    </div>
+    <!-- Repeat for 40 celebrities -->
+  </div>
+</section>
+
+<section id="book" class="section">
+  <h2>Book a Meet & Greet</h2>
+  <form onsubmit="submitBooking(event)">
+    <label>Date*</label>
+    <input type="date" required>
+    <label>Time*</label>
+    <input type="time" required>
+    <label>Number of Persons*</label>
+    <select>
+      <option>1 person</option>
+      <option>2 persons</option>
+      <option>3 persons</option>
+      <option>4+ persons</option>
+    </select>
+    <label>Name of Celebrity*</label>
+    <input type="write" required>
+    <label>Name*</label>
+    <input type="text" required>
+    <label>Email*</label>
+    <input type="email" required>
+    <label>Phone*</label>
+    <input type="tel" required>
+    <label>Special Requests</label>
+    <textarea placeholder="Any specific requirements..."></textarea>
+
+    <!-- Tiered Pricing Section -->
+<section class="pricing" id="pricing">
+  <h2 class="text-center">Choose Your Experience</h2>
+  <div class="pricing-container">
+    
+    <!-- General -->
+    <div class="pricing-card">
+      <h3>General Meet & Greet</h3>
+      <p class="price">$500</p>
+      <ul>
+        <li>✔ Group photo</li>
+        <li>✔ Handshake/Hug</li>
+        <li>✔ Q&A session</li>
+      </ul>
+      <a href="#booking-form" class="btn">Book Now</a>
+    </div>
+    
+    <!-- VIP -->
+    <div class="pricing-card vip">
+      <h3>VIP Experience</h3>
+      <p class="price">$1,000</p>
+      <ul>
+        <li>✔ Solo photo</li>
+        <li>✔ 25-min private talk</li>
+        <li>✔ Signed merch</li>
+      </ul>
+      <a href="#booking-form" class="btn">Book Now</a>
+    </div>
+    
+    <!-- Ultra VIP -->
+    <div class="pricing-card ultra">
+      <h3>Ultra VIP</h3>
+      <p class="price">$2,500+</p>
+      <ul>
+        <li>✔ Exclusive dinner</li>
+        <li>✔ Backstage access</li>
+        <li>✔ Priority entry</li>
+      </ul>
+      <a href="#booking-form" class="btn">Book Now</a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Booking Form Anchor -->
+<section id="booking-form">
+  <h2>Complete Your Booking</h2>
+  <!-- Your existing booking form here -->
+</section>
+
+<!-- CSS -->
+<style>
+.pricing {
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+.pricing h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.pricing-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+.pricing-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.pricing-card ul li {
+  margin: 8px 0;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #444;
+}
+.vip {
+  border: 2px solid gold;
+}
+.ultra {
+  border: 2px solid crimson;
+}
+</style>
+
+<!-- Payment Section -->
+<section id="payment" style="padding:40px; text-align:center; background:#f9f9f9;">
+  <h2>Crypto Payment</h2>
+  <p>Copy the address below:</p>
+
+  <!-- BTC -->
+  <div class="wallet-box">
+    <h3>Bitcoin (BTC)</h3>
+    <input type="text" id="btcWallet" value="bc1q87x29mzqf6x8gudsxrtvj0tau8nadrqxdfghf7" readonly>
+    <button onclick="copyWallet('btcWallet')">Copy</button>
+  </div>
+
+  <!-- ETH -->
+  <div class="wallet-box">
+    <h3>Ethereum (ETH)</h3>
+    <input type="text" id="ethWallet" value="0x6e82b7D83C3FA931d7aeFe53717D49797Ef1c683" readonly>
+    <button onclick="copyWallet('ethWallet')">Copy</button>
+  </div>
+</section>
+
+<!-- Script -->
+<script>
+function copyWallet(id) {
+  var copyText = document.getElementById(id);
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile
+  navigator.clipboard.writeText(copyText.value).then(() => {
+    alert("Wallet address copied: " + copyText.value);
+  });
+}
+</script>
+
+<!-- CSS -->
+<style>
+.wallet-box {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.wallet-box h3 {
+  margin-bottom: 10px;
+}
+.wallet-box input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+.wallet-box button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.wallet-box button:hover {
+  background: #444;
+}
+</style>
+
+   
+    <p>After your payment, a confirmation message will be sent directly to your email.</p>
+    <button type="submit">Submit Booking</button>
+  </form>
+</section>
+
+<section id="disclaimer" style="background:#f9f9f9; padding:2rem; text-align:center; border-top:2px solid #eee;">
+  <h2 style="font-size:1.8rem; margin-bottom:1rem;">Disclaimer</h2>
+  <p style="max-width:900px; margin:auto; font-size:1rem; line-height:1.6;">
+    The celebrity biographies and details on <strong>MeetTheStars</strong> are collected from publicly available sources and, in some cases, provided by fans or collaborators. While we strive for accuracy, some information may vary or be incomplete.
+
+<strong>MeetTheStars</strong> acts as an entertainment booking platform, connecting fans with celebrities for meet-and-greet opportunities, private engagements, and special events. We do not claim to be the exclusive agents, managers, or representatives of the celebrities listed on this site.
+  </p>
+</section>
+
+<section id="categories" style="padding:3rem 1rem; text-align:center;">
+  <h2 style="font-size:2rem; margin-bottom:2rem;">Browse by Category</h2>
+
+  <!-- Category List -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.5rem; max-width:1100px; margin:auto;">
+
+    <!-- Male Actors -->
+    <div class="category-box" style="background:white; border:1px solid #ddd; border-radius:10px; padding:1.5rem;">
+      <h3>Male Celebrities</h3>
+      <select onchange="goToBooking(this)">
+        <option value="">Select Category</option>
+        <option value="Jason Momoa">Jason Momoa</option>
+<option value="Charlie Hunnam">Charlie Hunnam</option>
+<option value="Tom Holland">Tom Holland</option>
+<option value="Keanu Reeves">Keanu Reeves</option>
+<option value="Mark Smith">Mark Smith</option>
+<option value="Clint Eastwood">Clint Eastwood</option>
+<option value="Jay Harrington">Jay Harrington</option>
+<option value="Blake Shelton">Blake Shelton</option>
+<option value="Pedro Pascal">Pedro Pascal</option>
+<option value="Luke Grimes">Luke Grimes</option>
+<option value="Johnny Depp">Johnny Depp</option>
+<option value="Travis Fimmel">Travis Fimmel</option>
+<option value="Taylor Kinney">Taylor Kinney</option>
+<option value="Bruce Springsteen">Bruce Springsteen</option>
+<option value="George Strait">George Strait</option>
+<option value="Hauser Cello">Hauser Cello</option>
+<option value="Kevin Costner">Kevin Costner</option>
+<option value="Donnie Wahlberg">Donnie Wahlberg</option>
+<option value="Jason Statham">Jason Statham</option>
+<option value="Jason Crabb">Jason Crabb</option>
+<option value="Will Smith">Will Smith</option>
+<option value="Clint Wright">Clint Wright</option>
+<option value="Patrick Mahomes">Patrick Mahomes</option>
+<option value="Tom Selleck">Tom Selleck</option>
+<option value="Cole Hauser">Cole Hauser</option>
+<option value="Kid Rock">Kid Rock</option>
+<option value="Anthony Hopkins">Anthony Hopkins</option>
+<option value="Chris Hemsworth">Chris Hemsworth</option>
+<option value="Gerard Butler">Gerard Butler</option>
+<option value="Tom Hiddleston">Tom Hiddleston</option>
+<option value="Johnny Orlando">Johnny Orlando</option>
+<option value="Sam Hueghan">Sam Hueghan</option>
+<option value="Alex Warren">Alex Warren</option>
+<option value="Eric Clapton">Eric Clapton</option>
+<option value="Trace Adkins">Trace Adkins</option>
+<option value="Chase Rice">Chase Rice</option>
+<option value="Channing Tatum">Channing Tatum</option>
+<option value="Riley Green">Riley Green</option>
+
+      </select>
+    </div>
+
+    <!-- Female Actors -->
+    <div class="category-box" style="background:white; border:1px solid #ddd; border-radius:10px; padding:1.5rem;">
+      <h3>Female Celebrities</h3>
+      <select onchange="goToBooking(this)">
+        <option value="">Select Category</option>
+       <option value="Michel Monroe">Michel Monroe</option>
+<option value="Sabrina Carpenter">Sabrina Carpenter</option>
+<option value="Beatrice Egli">Beatrice Egli</option>
+<option value="Liv Morgan">Liv Morgan</option>
+<option value="Hannah Barron">Hannah Barron</option>
+<option value="Amber Marshall">Amber Marshall</option>
+<option value="Sandra Bullock">Sandra Bullock</option>
+<option value="Danica Patrick">Danica Patrick</option>
+<option value="Alexa Bliss">Alexa Bliss</option>
+<option value="Shania Twain">Shania Twain</option>
+<option value="Olivia Dunne">Olivia Dunne</option>
+<option value="Meryl Streep">Meryl Streep</option>
+<option value="Olivia Rodrigo">Olivia Rodrigo</option>
+<option value="Naomi Scott">Naomi Scott</option>
+<option value="Jennifer Aniston">Jennifer Aniston</option>
+<option value="Dolly Parton">Dolly Parton</option>
+<option value="Halle Berry">Halle Berry</option>
+<option value="Lauren Elizabeth">Lauren Elizabeth</option>
+<option value="Ellen DeGeneres">Ellen DeGeneres</option>
+<option value="Carrie Underwood">Carrie Underwood</option>
+<option value="Jennifer Lawrence">Jennifer Lawrence</option>
+<option value="Andrea Berg">Andrea Berg</option>
+<option value="Amanda Holden">Amanda Holden</option>
+<option value="Emilia Clarke">Emilia Clarke</option>
+<option value="Jennifer Garner">Jennifer Garner</option>
+<option value="Mila Kunis">Mila Kunis</option>
+<option value="Juju Watkins">Juju Watkins</option>
+<option value="Lainey Wilson">Lainey Wilson</option>
+<option value="Dunia Santos">Dunia Santos</option>
+<option value="Emilia Clarke">Emilia Clarke</option>
+<option value="Margot Robbie">Margot Robbie</option>
+<option value="Kaley Cuoco">Kaley Cuoco</option>
+<option value="Caitlin Clark">Caitlin Clark</option>
+
+      </select>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function goToBooking(select) {
+  const celeb = select.value;
+  if (celeb) {
+    // Scroll to booking form and pre-fill with selected celeb
+    const bookingForm = document.getElementById("book");
+    if (bookingForm) {
+      bookingForm.scrollIntoView({behavior:"smooth"});
+      const celebInput = document.getElementById("celebName");
+      if (celebInput) celebInput.value = celeb;
+    }
+  }
+}
+</script>
+
+<footer>
+  <p>&copy;Meet The Stars. All Rights Reserved.</p>
+</footer>
+
+<script>
+function submitBooking(event) {
+  event.preventDefault();
+  alert("Booking submitted! Please complete payment and contact us to confirm.");
+}
+</script>
+
+</body>
+</html>
