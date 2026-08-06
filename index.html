@@ -1,220 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pride of Gypsies Foundation</title>
-  <style>
-    /* Base Reset & Variables */
-    :root {
-      --pink: #ff69b4;
-      --purple: #800080;
-      --black: #000000;
-      --white: #ffffff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: var(--black);
-      color: var(--white);
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    section {
-      padding: 80px 0;
-      text-align: center;
-    }
-
-    h1, h2, h3 {
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin-bottom: 30px;
-      font-size: 1.1rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      background: var(--pink);
-      color: var(--white);
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-      border: 2px solid var(--pink);
-    }
-
-    .btn:hover {
-      background: transparent;
-      color: var(--pink);
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 90vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                  url('jason.jpeg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: var(--white);
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 30px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-
-    /* About Section */
-    .about {
-      background-color: var(--purple);
-    }
-
-    /* Cards Grid */
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid var(--pink);
-      border-radius: 12px;
-      padding: 30px;
-      width: 100%;
-      max-width: 320px;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      background: rgba(255,255,255,0.12);
-    }
-
-    .card h3 {
-      color: var(--pink);
-      font-size: 1.4rem;
-    }
-
-    /* Verification Section */
-    .verification {
-      background: linear-gradient(to right, var(--purple), var(--pink));
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      section {
-        padding: 60px 0;
-      }
-
-      .btn {
-        padding: 10px 24px;
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley Green - Exclusive Meet & Greet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #121212;
+            --light: #f8f8f8;
+            --gray: #2a2a2a;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(18, 18, 18, 0.9) 50%, rgba(18, 18, 18, 0.6));
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            padding-left: 50px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s forwards 0.3s;
+        }
+        
+        .hero h1 span {
+            color: var(--gold);
+            display: block;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s forwards 0.5s;
+        }
+        
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60%;
+            max-width: 700px;
+            height: 80%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.7s;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            height: 400px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Process Section */
+        .process {
+            background: linear-gradient(to bottom, var(--dark), #1a1a1a);
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 30px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .step:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--gold);
+        }
+        
+        .step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') center/cover fixed;
+            position: relative;
+            padding: 120px 0;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(18, 18, 18, 0.85);
+        }
+        
+        .cta-content {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn:hover {
+            background: #c09d2d;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Form Styling */
+        .form-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 40px auto 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            color: white;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Animations */
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                padding-left: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-image {
+                width: 55%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding-left: 0;
+                max-width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-image {
+                position: relative;
+                width: 100%;
+                height: 400px;
+                transform: none;
+                margin-top: 30px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 14px 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Pride of Gypsies Foundation</h1>
-      <a href="https://services.zangi.com/dl/conversation/1016334537" class="btn">Connect with Management</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about">
-    <div class="container">
-      <h2>About the Foundation</h2>
-      <p>The Pride of Gypsies Foundation supports cultural preservation, environmental stewardship, and humanitarian efforts championed by Jason Momoa. We foster community, authenticity, and aloha spirit through exclusive fan engagement and charitable initiatives.</p>
-      <a href="https://services.zangi.com/dl/conversation/1016334537" class="btn">Support Now</a>
-    </div>
-  </section>
-
-  <!-- Exclusive Items Section -->
-  <section class="exclusive">
-    <div class="container">
-      <h2>Exclusive Items</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Signed Photo</h3>
-          <p>Limited edition, personally signed by Jason Momoa.</p>
-          <a href="https://services.zangi.com/dl/conversation/1016334537" class="btn">Order via Management</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Meet <span>Riley Green</span> – One-on-One Experience</h1>
+                <p>An exclusive, intimate encounter with the country music sensation. Reserve your private moment today.</p>
+                <a href="#inquiry" class="btn">Express Interest</a>
+            </div>
         </div>
-        <div class="card">
-          <h3>Custom Bracelet</h3>
-          <p>Handcrafted with ocean-inspired elements and symbolic charms.</p>
-          <a href="https://services.zangi.com/dl/conversation/1016334537" class="btn">Order via Management</a>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Riley Green performing">
         </div>
-        <div class="card">
-          <h3>Movie Memorabilia</h3>
-          <p>Authentic props and collectibles from iconic roles.</p>
-          <a href="https://services.zangi.com/dl/conversation/1016334537" class="btn">Order via Management</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experiences Section -->
-  <section class="experiences">
-    <div class="container">
-      <h2>Unique Experiences</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Video Greeting</h3>
-          <p>Receive a personalized video message for birthdays or special occasions.</p>
-          <a href="https://services.zangi.com/dl/conversation/1016334537" class="btn">Join via Management</a>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Experience</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Exclusive Moment with Riley Green</h3>
+                    <p>Riley Green, the Grammy-nominated country artist known for hits like "There Was This Girl" and "I Hope You Dance," invites you to an intimate, one-on-one encounter unlike any other.</p>
+                    <p>This exclusive experience offers you the rare opportunity to connect personally with Riley in a private setting. Whether you're a longtime fan, collector, or simply seeking a memorable moment, this encounter will be tailored to create lasting memories.</p>
+                    <p>Each session is limited to ensure authenticity and personal connection. Only a select few will have this privilege during Riley's exclusive meet-and-greet tour.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Riley Green portrait">
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h3>Virtual Call</h3>
-          <p>One-on-one virtual meet-and-greet with Jason Momoa.</p>
-          <a href="https://services.zangi.com/dl/conversation/1016334537" class="btn">Join via Management</a>
-        </div>
-        <div class="card">
-          <h3>Event Raffle</h3>
-          <p>Enter for a chance to attend exclusive fan events and premieres.</p>
-          <a href="https://services.zangi.com/dl/conversation/1016334537" class="btn">Join via Management</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Verification / Contact Section -->
-  <section class="verification">
-    <div class="container">
-      <p><em>This is the only official private channel for Jason Momoa fans. Connect safely through management only via the links above.</em></p>
-      <a href="https://services.zangi.com/dl/conversation/1016334537 class="btn">Chat with Management</a>
-    </div>
-  </section>
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Book Your Spot</h3>
+                    <p>Submit your interest through our secure form. Availability is extremely limited.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Schedule Your Session</h3>
+                    <p>Our team will contact you to confirm details and arrange your private meeting time.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>Meet Riley</h3>
+                    <p>Enjoy your exclusive one-on-one experience with Riley Green at the designated venue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CTA Section -->
+    <section class="cta" id="inquiry">
+        <div class="cta-content">
+            <h2>Reserve Your Exclusive Experience</h2>
+            <p>Spaces are strictly limited to maintain the intimate nature of this encounter. Express your interest now to secure your private moment with Riley Green.</p>
+            <a href="#form" class="btn">Request Availability</a>
+            
+            <div class="form-container" id="form">
+                <h3 style="text-align: center; margin-bottom: 20px; color: var(--gold);">Express Your Interest</h3>
+                <form id="interestForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Why would you like to meet Riley?</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Note: Contact the management team for further information.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('interestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, this would send the data to a server
+            // For this demo, we'll just show an alert
+            alert('Thank you for expressing your interest! Our team will contact you shortly to confirm availability.');
+            
+            // Reset the form
+            this.reset();
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.step, .about-text, .about-image').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
-
